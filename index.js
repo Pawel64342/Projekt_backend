@@ -4,16 +4,18 @@ var cors=require("cors");
 const multer=require("multer")
 
 var app=Express()
+
 app.use(cors())
 var CONNECTION_STRING="mongodb+srv://Pawel64342:Student.002@cluster0.poobja8.mongodb.net/?retryWrites=true&w=majority"
 
 var DATABASENAME="todoappdb"
 var database;
 
-app.listen(5038,()=>{
+const port = process.env.PORT || 9003;
+app.listen(port,()=>{
     Mongoclient.connect(CONNECTION_STRING,(error,client)=>{
         database=client.db(DATABASENAME);
-        console.log("Mongo DB connection success")
+        console.log("Mongo DB connection success ",port)
     }
         )
 })
