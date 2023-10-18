@@ -18,7 +18,7 @@ const port = process.env.PORT || 9003;
 app.listen(port,()=>{
     Mongoclient.connect(CONNECTION_STRING,(error,client)=>{
         database=client.db(DATABASENAME);
-        console.log("Mongo DB connection success ",c,port)
+        console.log("Mongo DB connection success ",port)
     }
         )
 })
