@@ -8,8 +8,8 @@ const multer=require("multer")
 var app=Express()
 
 app.use(cors())
-// var CONNECTION_STRING="mongodb+srv://Pawel64342:Student.002@cluster0.poobja8.mongodb.net/?retryWrites=true&w=majority"
-let c=config
+
+
 var CONNECTION_STRING=config
 var DATABASENAME="todoappdb"
 var database;
